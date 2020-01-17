@@ -14,5 +14,5 @@
 **Run the tests**
 
 ```
-  npm run Jest
+  npm run test
 ```
