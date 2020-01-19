@@ -45,7 +45,12 @@ class Robot {
         this.position.x--;
         break;
     }
-    if (this.position.x > grid.maxX || this.position.y > grid.maxY) {
+    if (
+      this.position.x > grid.maxX ||
+      this.position.y > grid.maxY ||
+      this.position.x < grid.minX ||
+      this.position.y < grid.minY
+    ) {
       this.position = { ...previousPosition };
       const scentFound = this.checkForScents(grid);
       if (!scentFound) {
