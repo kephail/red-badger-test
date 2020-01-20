@@ -45,12 +45,7 @@ class Robot {
         this.position.x--;
         break;
     }
-    if (
-      this.position.x > grid.maxX ||
-      this.position.y > grid.maxY ||
-      this.position.x < grid.minX ||
-      this.position.y < grid.minY
-    ) {
+    if (grid.isPositionOffGrid(this.position)) {
       this.position = { ...previousPosition };
       const scentFound = this.checkForScents(grid);
       if (!scentFound) {
@@ -117,7 +112,9 @@ class Robot {
 
   missionReport() {
     let output = `${this.position.x} ${this.position.y} ${this.orientation}`;
-    if (this.status === STATUS.LOST) output += ` ${STATUS.LOST}`;
+    if (this.status === STATUS.LOST) {
+      output += ` ${STATUS.LOST}`;
+    }
     return output;
   }
 }
