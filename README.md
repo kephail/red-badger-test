@@ -62,17 +62,17 @@ The maximum value for any coordinate is 50.
 
 All instruction strings will be less than 100 characters in length.
 
-## The Output
+### The Output
 
 For each robot position/instruction in the input, the output should indicate the final grid position and orientation of the robot. If a robot falls off the edge of the grid the word “LOST” should be printed after the position and orientation.
 
-### Sample Input
+#### Sample Input
 53
 11E RFRFRFRF
 32N FRRFLLFFRRFLL
 03W LLFFFLFLFL
 
-### Sample Output
+#### Sample Output
 11E
 33NLOST
 23S
